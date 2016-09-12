@@ -1,0 +1,33 @@
+---
+title: "Quantified Self"
+author: "Ralph Rogge (RRO)"
+date: "12 September 2016"
+output:
+    html_document:
+        fig_width: 10
+        fig_height: 6
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Load R packages
+```{r, message=FALSE}
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+```
+
+Load workouts
+```{r}
+workouts <- read.csv("Raw Data/workouts.csv", as.is=TRUE)
+nrow(workouts)
+```
+
+Load metrics
+```{r}
+metrics <- read.csv("Raw Data/metrics.csv", as.is=TRUE)
+nrow(metrics)
+```
+
